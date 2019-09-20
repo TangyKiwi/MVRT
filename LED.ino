@@ -3,7 +3,7 @@
 
 #define LED_PIN 5 //DIO pin used for control of LEDs
 #define NUM_LEDS 60 //number of LEDs in LED strip
-int LEDmode = 2;
+int LEDmode = 0;
 int lastMode = 0;
 int x = 0;
 uint8_t gHue = 0;

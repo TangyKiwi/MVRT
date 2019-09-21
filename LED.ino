@@ -97,9 +97,9 @@ void colorWipe(CRGB color)
 void MVRT()
 {
   boolean color = true;
-  for(int i = 0; i < NUM_LEDS; i+=4)
+  for(int i = 0; i < NUM_LEDS; i+=5)
   {
-    for(int j = 0; j < 4; j++)
+    for(int j = 0; j < 5; j++)
     {
       if(color) leds[i + j] = CRGB(128,0,128); //suposed to be purple;
       else leds[i + j] = CRGB(255,200,0); //supposed to be gold;

@@ -16,12 +16,12 @@ void setup()  //Arduino Init loop.
   delay(3000);
   Serial.begin(9600); //So we can watch serial monitor.  Use lots of print statments when debugging.
   FastLED.addLeds<WS2812, LED_PIN, GRB>(leds, NUM_LEDS);
-  Wire.begin(8);  //Start I2C object, assigned to port #8. 
+  Wire.begin()
 }
 
 void loop()
 {
-  //Wire.onReceive(dataReceived); //Looks for data send over I2C, begins when any is detected, no matter the size. 
+  Wire.onReceive(dataReceived); //Looks for data send over I2C, begins when any is detected, no matter the size. 
   RunLEDs(LEDmode); //If data is received, this function passes that information to the RunLEDs method.
 }
 
